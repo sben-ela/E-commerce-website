@@ -1,0 +1,15 @@
+.custom-image-gallery .image-gallery-slide-wrapper {
+    height: 200px; 
+}
+
+.custom-image-gallery .image-gallery-content {
+    height: 200vh;
+    position: absolute;
+    top: 0;
+}
+
+.custom-image-gallery .image-gallery-slide img {
+    height: 100vh;
+}
+
+

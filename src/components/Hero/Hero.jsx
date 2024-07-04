@@ -49,7 +49,7 @@ const Hero = ()=>{
                 heros.map(hero => (
                     <div key={hero.title} className='focus:outline-none  relative bg-[#c9caca]'>
                         <img src={hero.image} alt="heroImage" className='w-full h-[95vh] object-right object-contain' />
-                        <div className='absolute top-[50%]  flex flex-col m-5 '>
+                        <div className='absolute top-[10%] lg:[50%] flex flex-col m-5 '>
                             {/* <h1 className='font-extrabold p-10 ransition-all'>{hero.title}</h1>
                             <p>{hero.discription}</p> */}
                             <TypeAnimation
@@ -65,7 +65,7 @@ const Hero = ()=>{
                                     ]}
                                     wrapper="span"
                                     speed={10}
-                                    className='lg:text-[3vw] font-bold text-black md:text-[4vw] font-playwrite'
+                                    className='lg:text-[3vw] text-[5vw]   font-bold text-black  font-playwrite'
                                     repeat={Infinity}
                                         />
                         </div>

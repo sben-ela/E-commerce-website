@@ -1,5 +1,6 @@
 import { act, useEffect, useState } from "react";
 import Product from "./Product";
+import ProductDetails from "./ProductDetails";
 
 
 
@@ -8,6 +9,7 @@ export default function Products()
     const [active, setActive] = useState(0);
     const [items, setItems] = useState([]);
     const [filteredItems, setFilteredItems] = useState([]);
+    const [view, setView] = useState(null);
 
     const types = [
         'All Products' , 'Men', 'Women', 'Shoes', 'Watches'        
@@ -38,6 +40,7 @@ export default function Products()
 
     return(
         <div>
+            {view && <ProductDetails  product={items[view-1]} setView={setView} />}
             <ul className="flex py-20  flex-wrap ">
                 {
                     types.map(((type, index) => (
@@ -60,10 +63,10 @@ export default function Products()
                 }
             </ul>
             { (filteredItems.length || (items.length && !active)) ? 
-                <div className="grid gap-[100px] md:grid-cols-2 lg:grid-cols-3  2xl:grid-cols-4">
+                <div className=" bg-transparent grid gap-[100px] md:grid-cols-2 lg:grid-cols-3  2xl:grid-cols-4">
                     {(active != 0 ? filteredItems : items)?.map((item) =>
-                        <div key={item.title}>
-                            <Product  product={item}></Product>
+                        <div key={item.title}  >
+                            <Product  product={item} setView={setView} ></Product>
                         </div>)}
                 </div> : <div className=" flex h-[10vh] justify-center text-4xl  text-gray-500 rounded-lg ">there's No {types[active]}</div>
             }

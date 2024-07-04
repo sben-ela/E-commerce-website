@@ -61,12 +61,14 @@ const Nav = ()=>{
             {
                 !bigScreen &&
                 <div className="relative">
+                    {!showNav && <a className="left-10 font-bebas absolute block top-10 z-20 text-5xl font-bold w-[50vw] text-black" >Seg Store</a>}
                     
                     { showNav && <MdOutlineClose onClick={()=>{setShowNav(false)}} className=" absolute scale-[4] text-white z-40 right-10 top-5" />}
                     { !showNav && <IoMenu onClick={()=>{setShowNav(true)}} className=" absolute scale-[4] text-black z-40 right-10 top-5" />}
                     { showNav &&
+
                         <motion.div initial={{ y: -200, opacity:0}}  viewport={{once:true}}
-                        whileInView={{y : 0, opacity:1}} transition={{duration :2}}>
+                        whileInView={{y : 0, opacity:1}} transition={{duration :1}}>
                         <div  ref={navRef} className="relative h-[350px] z-30 w-[100%] bg-[#25273f]" >
                         {/* <a className="left-10 z-30 font-bebas absolute block top-10 text-5xl font-bold w-[50vw]" >Seg Store</a> */}
                             <ul className='flex absolute justify-center w-[100%] flex-col'>    
