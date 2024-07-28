@@ -59,15 +59,15 @@ const ProductDetails = ({product, setView}) =>{
                         </div>
                         <div className="xl:p-20 p-8 flex flex-col space-y-5 mt-[150px]  lg:w-[50%]">
                             <h1 className="text-gray-800 text-2xl font-bold font-roboto" >{product.title.slice(0, 20)}</h1>
-                            <a className="text-xl font-extrabold" > {product.price} $ </a>
+                            <a className="hover:text-black hover:no-underline text-xl font-extrabold" > {product.price} $ </a>
                             <p className=" text-gray-600 text-xl font-roboto pb-4" > {desc} </p>
                             <div className="flex flex-col space-y-5">
                             <label className="flex justify-between lg:justify-around text-xl text-gray-700 px-10">
-                                <a className="p-2" >Color</a> 
+                                <a className="hover:text-black hover:no-underline p-2" >Color</a> 
                                 <Select className='w-[50%]'  options={ColorOptions}></Select>
                             </label>
                             <label className="flex justify-between lg:justify-around text-xl text-gray-700 px-10">
-                                <a className="p-2" >Size</a> 
+                                <a className="hover:text-black hover:no-underline p-2" >Size</a> 
                                 <Select className='w-[50%]'  options={SizeOptions}></Select>
                             </label>
                             <InputNumber className='p-2 translate-y-5  translate-x-[50%] w-[50%]  font-extrabold' max={10} min={1} />

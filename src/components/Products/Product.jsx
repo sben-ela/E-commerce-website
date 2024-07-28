@@ -36,8 +36,8 @@ const Product = ({product, setView})=>{
                 > Quick View </button>
             </div>
             <div className="px-10 mt-5 relative">
-                <a className=" block text-xl opacity-50 ">{product.title.slice(0, 20)}</a>
-                <a className=" font-bold text-xl block pt-2" ><span className="opacity-60">$</span> {product.price}</a>
+                <a className="hover:text-black hover:no-underline  block text-xl opacity-50 ">{product.title.slice(0, 20)}</a>
+                <a className="hover:text-black hover:no-underline  font-bold text-xl block pt-2" ><span className="opacity-60">$</span> {product.price}</a>
                 {!loved  && <CiHeart className="cursor-pointer absolute right-10 scale-[1.9] -translate-y-8" onClick={()=>setLoved(true)}/>}
                 { loved && <FaHeart className="cursor-pointer absolute right-10 scale-[1.5] -translate-y-8 text-red-500" onClick={()=>setLoved(false)}/> }
             </div>
